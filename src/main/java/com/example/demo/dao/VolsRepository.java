@@ -2,6 +2,7 @@ package com.example.demo.dao;
 
 import com.example.demo.entities.Vols;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,6 +12,7 @@ public interface VolsRepository  extends JpaRepository<Vols, String> {
     List<Vols> findByDateDuvol(String date);
     Vols deleteVolsByNumeroDuVol(String id);
     Vols findByNumeroDuVol(String num);
- 
+
+
 
 }

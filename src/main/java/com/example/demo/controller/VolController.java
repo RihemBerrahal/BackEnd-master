@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 
 
+import com.example.demo.entities.Achatbillet;
 import com.example.demo.entities.Vols;
 import com.example.demo.service.VolService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,4 +52,14 @@ public class VolController {
   public Vols dfindvol(@RequestBody String id){
       return volService.findvol(id);
   }
+    @PostMapping("/findaller")
+    public List<Vols> volaller(@RequestBody Achatbillet achatbillet){
+        return volService.volaller(achatbillet);
+    }
+    @PostMapping("/findretour")
+    public List<Vols> volretour(@RequestBody Achatbillet achatbillet){
+        return volService.volretour(achatbillet);
+    }
+
+
 }
